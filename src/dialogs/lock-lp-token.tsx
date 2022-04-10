@@ -11,16 +11,18 @@ import { Text } from 'src/components/Texts';
 import { Staking } from '@keplr-wallet/stores';
 import { CoinPretty, Dec, DecUtils } from '@keplr-wallet/unit';
 import { IAmountConfig, InsufficientAmountError, useAmountConfig } from '@keplr-wallet/hooks';
+import 'dayjs/locale/ru';
 
 export const LockLpTokenDialog = wrapBaseDialog(
 	observer(
 		({ poolId, close, isSuperfluidEnabled }: { poolId: string; close: () => void; isSuperfluidEnabled: boolean }) => {
 			const { chainStore, queriesStore, accountStore, priceStore } = useStore();
-
+			
 			const account = accountStore.getAccount(chainStore.current.chainId);
 			const queries = queriesStore.get(chainStore.current.chainId);
+			
 			const lockableDurations = queries.osmosis.queryLockableDurations.lockableDurations;
-
+			//console.log(queries.osmosis.queryLockableDurations.lockableDurations);
 			const hasNotExistSuperfluidLock = useMemo(() => {
 				const superfluidDelegations = queries.osmosis.querySuperfluidDelegations
 					.getQuerySuperfluidDelegations(account.bech32Address)
@@ -48,24 +50,27 @@ export const LockLpTokenDialog = wrapBaseDialog(
 			const isShowingSuperfluidCheckbox =
 				selectedDurationIndex === lockableDurations.length - 1 && isSuperfluidEnabled && hasNotExistSuperfluidLock;
 			useEffect(() => {
+				
 				if (isShowingSuperfluidCheckbox) {
 					setIsCheckedSuperfluid(true);
 				} else {
 					setIsCheckedSuperfluid(false);
 				}
 			}, [isShowingSuperfluidCheckbox]);
-
+		
 			return (
 				<div className="text-white-high w-full h-full">
 					{!isValidatorSelectStage ? (
 						<React.Fragment>
 							{' '}
-							<h5 className="text-lg md:text-xl mb-5 md:mb-9">Bond LP tokens</h5>
+							<h5 className="text-lg md:text-xl mb-5 md:mb-9">Bond токены LP</h5>
 							<div className="mb-2.5 md:mb-7.5">
-								<p>Unbonding period</p>
+								<p>Срок Unbonding</p>
 							</div>
 							<ul className="flex flex-col gap-2.5 mb-5 md:flex-row md:gap-6 md:mb-6">
+								
 								{lockableDurations.map((duration, i) => {
+									
 									let apy = `${queries.osmosis.queryIncentivizedPools
 										.computeAPY(poolId, duration, priceStore, priceStore.getFiatCurrency('usd')!)
 										.toString()}%`;
@@ -82,9 +87,10 @@ export const LockLpTokenDialog = wrapBaseDialog(
 									}
 
 									return (
+										
 										<LockupItem
 											key={i.toString()}
-											duration={duration.humanize()}
+											duration={duration.locale('ru').humanize()}
 											setSelected={() => {
 												setSelectedDurationIndex(i);
 											}}
@@ -92,6 +98,7 @@ export const LockLpTokenDialog = wrapBaseDialog(
 											apy={apy}
 											isSuperfluidEnabled={lockableDurations.length - 1 === i && isSuperfluidEnabled}
 										/>
+										
 									);
 								})}
 							</ul>
@@ -108,7 +115,7 @@ export const LockLpTokenDialog = wrapBaseDialog(
 										) : (
 											<div className="w-6 h-6 border-2 border-white-high mr-2.5 rounded" />
 										)}
-										<span className="mr-2">Superfluid Stake</span>
+										<span className="mr-2">Стейк Superfluid</span>
 										<div className="w-6 h-6">
 											<Img src={'/public/assets/Icons/superfluid-osmo.svg'} />
 										</div>
@@ -116,9 +123,9 @@ export const LockLpTokenDialog = wrapBaseDialog(
 								</div>
 							)}
 							<div className="w-full pt-3 pb-3.5 pl-3 pr-2.5 border border-white-faint rounded-2xl mb-8">
-								<p className="mb-3">Amount to bond</p>
+								<p className="mb-3">Бондированая Сумма</p>
 								<p className="text-sm mb-3.5">
-									Available LP token:{' '}
+									Доступные токэны LP:{' '}
 									<span className="text-primary-50">
 										{queries.queryBalances
 											.getQueryBech32Address(account.bech32Address)
@@ -214,7 +221,7 @@ export const LockLpTokenDialog = wrapBaseDialog(
 										onClick={() => setIsValidatorSelectStage(false)}
 									/>
 									<h5 className="ml-9 text-lg md:text-xl">
-										Select <span className="hidden md:inline">{'Superfluid '}</span>Validator
+										Выбрать <span className="hidden md:inline">{'Superfluid '}</span>валидатора
 									</h5>
 								</React.Fragment>
 							}
@@ -280,7 +287,7 @@ export const UpgradeLockedLPToSuperfluidDialog = wrapBaseDialog(
 					header={
 						<React.Fragment>
 							<h5 className="text-lg md:text-xl">
-								Select <span className="hidden md:inline">{'Superfluid '}</span>Validator
+								Выбрать <span className="hidden md:inline">{'Superfluid '}</span>валидатора
 							</h5>
 						</React.Fragment>
 					}

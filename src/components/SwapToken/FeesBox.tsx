@@ -54,7 +54,7 @@ export const FeesBox = observer(function FeesBox({ config, ...props }: Props) {
 		<FeeBoxContainer {...props}>
 			<Section>
 				<Text size="sm" isMobileView={isMobileView}>
-					Rate
+					Курс
 				</Text>
 				<Text size="sm" isMobileView={isMobileView}>
 					{`1 ${config.sendCurrency.coinDenom.toUpperCase()} = ${inSpotPrice
@@ -75,7 +75,7 @@ export const FeesBox = observer(function FeesBox({ config, ...props }: Props) {
 
 			<Section>
 				<Text size="sm" isMobileView={isMobileView}>
-					Swap Fee
+				Обменный сбор
 				</Text>
 				<Text size="sm" isMobileView={isMobileView}>
 					{swapFeeText}
@@ -86,7 +86,7 @@ export const FeesBox = observer(function FeesBox({ config, ...props }: Props) {
 
 			<Section>
 				<Text isMobileView={isMobileView} emphasis="high" size="sm" weight="semiBold">
-					Estimated Slippage
+					Приблизительное проскальзывание
 				</Text>
 				<Text
 					isMobileView={isMobileView}

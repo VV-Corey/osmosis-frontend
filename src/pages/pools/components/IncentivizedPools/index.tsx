@@ -42,15 +42,15 @@ export const IncentivizedPools: FunctionComponent = observer(() => {
 
 	return (
 		<FullWidthContainer>
-			<TitleText>Incentivized Pools</TitleText>
+			<TitleText>Пулы с стимулами</TitleText>
 
 			{incentivizedPoolInfoList.length === 0 ? (
 				<NoActiveCard>
 					<Text size="lg" emphasis="high" pb={20}>
-						No active liquidity incentives
+						Активных стимулов нет
 					</Text>
 					<Text weight="medium">
-						Liquidity mining will begin once the first update pool incentives governance proposal passes.
+						Загрузка
 					</Text>
 				</NoActiveCard>
 			) : null}

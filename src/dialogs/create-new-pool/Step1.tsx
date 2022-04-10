@@ -42,14 +42,14 @@ export const NewPoolStage1 = observer(function NewPoolStage1({ config, close }: 
 		<div onClick={() => setCurrentAssetAt(-1)}>
 			<CreateNewPoolHeadSection>
 				<HeadTitle>
-					<TitleText pb={0}>Create New Pool</TitleText>
+					<TitleText pb={0}>Создать новый пул</TitleText>
 					<ButtonFaint onClick={close}>
 						<CloseIcon />
 					</ButtonFaint>
 				</HeadTitle>
 				<HeadSubTitle>
 					<Text size="sm" emphasis="medium">
-						Step 1/3 - Set token ratio
+						Шаг 1/3 - Выбрать пропорцию токенов
 					</Text>
 				</HeadSubTitle>
 			</CreateNewPoolHeadSection>
@@ -81,7 +81,7 @@ export const NewPoolStage1 = observer(function NewPoolStage1({ config, close }: 
 								src="/public/assets/Icons/Add.svg"
 							/>
 						</AddButton>
-						<TitleText pb={0}>Add new token</TitleText>
+						<TitleText pb={0}>Выбрать токен</TitleText>
 					</CenterV>
 				</AddTokenSection>
 			)}

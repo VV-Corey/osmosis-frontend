@@ -30,7 +30,7 @@ export const PoolCardItem = observer(function PoolCardItem(
 				<TokenInfoContainer>
 					<PoolCardTokenIcon bgIndex={poolId} src="/public/assets/Icons/OSMO.svg" />
 					<div style={{ marginTop: '15px' }}>
-						<h5>Pool #{poolId}</h5>
+						<h5>Пул #{poolId}</h5>
 						<PoolSubTitle>
 							{tokens
 								.map(token => {
@@ -48,7 +48,7 @@ export const PoolCardItem = observer(function PoolCardItem(
 					<>
 						<CenterV as="section">
 							<div>
-								<PoolHeaderText>Pool Liquidity</PoolHeaderText>
+								<PoolHeaderText>Ликвидность в пуле</PoolHeaderText>
 								<PoolValueText>{liquidity.value}</PoolValueText>
 							</div>
 							{apr?.value && (
@@ -67,7 +67,7 @@ export const PoolCardItem = observer(function PoolCardItem(
 
 						<CenterV>
 							<div>
-								<PoolHeaderText>My Liquidity</PoolHeaderText>
+								<PoolHeaderText>Моя ликвидность</PoolHeaderText>
 								{props.myLiquidity.isLoading ? (
 									<CardInfoPlaceholder className="w-23 h-4 bg-cardInfoPlaceholder" />
 								) : (
@@ -76,7 +76,7 @@ export const PoolCardItem = observer(function PoolCardItem(
 							</div>
 							{props.myLockedAmount?.value && (
 								<div style={{ marginLeft: '20px' }}>
-									<PoolHeaderText>My Bonded Amount</PoolHeaderText>
+									<PoolHeaderText>Моя залоченая ликвидность</PoolHeaderText>
 
 									{props.myLockedAmount.isLoading ? (
 										<CardInfoPlaceholder className="w-23 h-4 bg-cardInfoPlaceholder" />
@@ -98,7 +98,7 @@ export const PoolCardItem = observer(function PoolCardItem(
 							)}
 						</AprCol>
 						<div style={{ marginLeft: '20px' }}>
-							<PoolHeaderText>Pool Liquidity</PoolHeaderText>
+							<PoolHeaderText>Ликвидность</PoolHeaderText>
 							<PoolValueText>{liquidity.value}</PoolValueText>
 						</div>
 					</CenterV>

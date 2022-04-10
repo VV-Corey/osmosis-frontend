@@ -23,9 +23,9 @@ export const LabsOverview = observer(function LabsOverview() {
 				isHideCloseButton
 			/>
 			<OverviewTitle>
-				<h5 className="flex-shrink-0">Active Pools</h5>
+				<h5 className="flex-shrink-0">Активные пулы</h5>
 				{!HideCreateNewPool && !isMobileView && (
-					<CreateButton onClick={() => setIsDialogOpen(true)}>Create New Pool</CreateButton>
+					<CreateButton onClick={() => setIsDialogOpen(true)}>Создать новый пул</CreateButton>
 				)}
 			</OverviewTitle>
 

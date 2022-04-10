@@ -27,11 +27,12 @@ export const RewardPayoutCountdown = observer(function RewardPayoutCountdown() {
 		if (delta.asSeconds() <= 0) {
 			return '00-00';
 		}
+		console.log(delta)
 		return delta.format('HH-mm');
 	})();
 	const [hour, minute] = payoutTime.split('-');
 	return (
-		<OverviewLabelValue label="Reward distribution in">
+		<OverviewLabelValue label="Следующая премия через ">
 			<DisplayLeftTime hour={hour} minute={minute} />
 		</OverviewLabelValue>
 	);

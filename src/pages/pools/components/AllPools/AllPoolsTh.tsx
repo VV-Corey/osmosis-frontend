@@ -5,10 +5,10 @@ import { CenterV } from 'src/components/layouts/Containers';
 export function AllPoolsTh({ widths }: { widths: string[] }) {
 	return (
 		<PoolsTableHeader as="tr">
-			<PoolsTableRow style={{ width: `${widths[0]}` }}>ID</PoolsTableRow>
-			<PoolsTableRow style={{ width: `${widths[1]}` }}>Token Info</PoolsTableRow>
+			<PoolsTableRow style={{ width: `${widths[0]}` }}>№</PoolsTableRow>
+			<PoolsTableRow style={{ width: `${widths[1]}` }}>Состав токенов</PoolsTableRow>
 			<PoolsTableRow style={{ width: `${widths[2]}` }}>TVL</PoolsTableRow>
-			<PoolsTableRow style={{ width: `${widths[3]}` }}>24h Volume</PoolsTableRow>
+			<PoolsTableRow style={{ width: `${widths[3]}` }}>Объем последних 24ч</PoolsTableRow>
 		</PoolsTableHeader>
 	);
 }

@@ -45,11 +45,11 @@ export const OverviewLabelValueGridList = observer(function OverviewLabelGridLis
 
 	if (!PreferHeaderShowTokenPricePoolIds[pool.id]) {
 		firstOverviews.push({
-			label: 'Pool Liquidity',
+			label: 'Ликвидность в пуле',
 			content: pool.computeTotalValueLocked(priceStore, priceStore.getFiatCurrency('usd')!).toString(),
 		});
 		firstOverviews.push({
-			label: 'My Liquidity',
+			label: 'Моя ликвидность',
 			content: (() => {
 				const tvl = pool.computeTotalValueLocked(priceStore, priceStore.getFiatCurrency('usd')!);
 
@@ -58,20 +58,20 @@ export const OverviewLabelValueGridList = observer(function OverviewLabelGridLis
 		});
 
 		secondOverviews.push({
-			label: 'Bonded',
+			label: 'Заблокирован',
 			content: pool
 				.computeTotalValueLocked(priceStore, priceStore.getFiatCurrency('usd')!)
 				.mul(actualLockedRatio)
 				.toString(),
 		});
 		secondOverviews.push({
-			label: 'Swap Fee',
+			label: 'Обменный сбор',
 			content: pool.swapFee.toString() + '%',
 		});
 
 		if (!pool.exitFee.toDec().equals(new Dec(0))) {
 			secondOverviews.push({
-				label: 'Exit Fee',
+				label: 'Выходный сбор',
 				content: pool.exitFee.toString() + '%',
 			});
 		}
@@ -79,7 +79,7 @@ export const OverviewLabelValueGridList = observer(function OverviewLabelGridLis
 		const baseDenom = PreferHeaderShowTokenPricePoolIds[pool.id]!.baseDenom;
 		const baseCurrency = chainStore.currentFluent.forceFindCurrency(baseDenom);
 		firstOverviews.push({
-			label: 'Price',
+			label: 'Цена',
 			content:
 				priceStore
 					.calculatePrice(new CoinPretty(baseCurrency, DecUtils.getPrecisionDec(baseCurrency.coinDecimals)))
@@ -87,17 +87,17 @@ export const OverviewLabelValueGridList = observer(function OverviewLabelGridLis
 		});
 
 		secondOverviews.push({
-			label: 'Pool Liquidity',
+			label: 'Ликвидность в пуле',
 			content: pool.computeTotalValueLocked(priceStore, priceStore.getFiatCurrency('usd')!).toString(),
 		});
 		secondOverviews.push({
-			label: 'Swap Fee',
+			label: 'Обменный сбор',
 			content: pool.swapFee.toString() + '%',
 		});
 
 		if (!pool.exitFee.toDec().equals(new Dec(0))) {
 			secondOverviews.push({
-				label: 'Exit Fee',
+				label: 'Выходный сбор',
 				content: pool.exitFee.toString() + '%',
 			});
 		}

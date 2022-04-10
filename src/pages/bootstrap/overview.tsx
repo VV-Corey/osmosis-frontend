@@ -30,15 +30,15 @@ export const LBPOverview: FunctionComponent<{ title: string; poolIds: string[] }
 			</div>
 			<div className="flex flex-col md:flex-row md:gap-21.5">
 				<div className="flex items-center gap-10 md:gap-21.5 mb-2.5 md:mb-0">
-					<OverviewLabelValue label="Active Pools">
+					<OverviewLabelValue label="Активные Пулы">
 						<h5 className="inline md:text-2xl text-xl">{activePools.length}</h5>
 					</OverviewLabelValue>
-					<OverviewLabelValue label="Total Pools">
+					<OverviewLabelValue label="Все Пулы">
 						<h5 className="inline md:text-2xl text-xl">{poolIds.length}</h5>
 					</OverviewLabelValue>
 				</div>
 				<div>
-					<OverviewLabelValue label="Total Pool Value">
+					<OverviewLabelValue label="Общая Сумма в Пуле (?)">
 						<h5 className="inline md:text-2xl text-xl">{totalPoolValue.toString()}</h5>
 					</OverviewLabelValue>
 				</div>

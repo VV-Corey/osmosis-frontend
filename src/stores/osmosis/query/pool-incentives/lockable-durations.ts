@@ -25,6 +25,7 @@ export class ObservableQueryLockableDurations extends ObservableChainQuery<Locka
 				// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 				// @ts-ignore
 				return dayjs.duration(parseInt(durationStr.replace('s', '')) * 1000);
+				
 			})
 			.slice()
 			.sort((v1, v2) => {

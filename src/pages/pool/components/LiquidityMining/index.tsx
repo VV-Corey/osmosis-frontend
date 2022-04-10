@@ -16,6 +16,7 @@ import { ExtraGauge } from './ExtraGauge';
 import { MyBondingsTable } from './MyBondingsTable';
 import { MySuperfluidUnbondingTable } from './MySuperfluidUnbondingTable';
 import { MyUnBondingTable } from './MyUnbondingTable';
+import 'dayjs/locale/ru';
 
 interface Props {
 	poolId: string;
@@ -55,21 +56,21 @@ export const LiquidityMining = observer(function LiquidityMining({ poolId, isSup
 					<div>
 						<div className="pb-4 flex flex-col md:flex-row gap-2.5 md:gap-3 items-start md:items-center">
 							<TitleText isMobileView={isMobileView} pb={0} weight="semiBold">
-								Liquidity Mining
+							Добыча ликвидности
 							</TitleText>
 							{isSuperfluidEnabled && (
-								<div className="bg-sfs rounded-full px-4 py-1 text-xs md:text-base">Superfluid Staking Enabled</div>
+								<div className="bg-sfs rounded-full px-4 py-1 text-xs md:text-base">Superfluid Staking включен</div>
 							)}
 						</div>
 						<Text isMobileView={isMobileView}>
-							Bond liquidity to various minimum unbonding period to earn
+							Положить ликвидность на разные сроки чтобы зарабатывать 
 							{!isMobileView ? <br /> : ' '}
-							OSMO liquidity reward and swap fees
+							премие и обменные сборы 
 						</Text>
 					</div>
 					<AvailableLpColumn>
 						<Text isMobileView={isMobileView} pb={12}>
-							Available LP tokens
+							Доступные токены LP
 						</Text>
 						<Text isMobileView={isMobileView} pb={16} size="xl" emphasis="high" weight="semiBold">
 							{/* TODO: 풀의 TVL을 계산할 수 없는 경우 그냥 코인 그대로 보여줘야할듯... */}
@@ -83,7 +84,7 @@ export const LiquidityMining = observer(function LiquidityMining({ poolId, isSup
 									setIsDialogOpen(true);
 								}}>
 								<Text isMobileView={isMobileView} emphasis="high">
-									Start Earning
+									Начать зарабатывать 
 								</Text>
 							</ButtonPrimary>
 						</div>
@@ -133,7 +134,7 @@ export const LiquidityMining = observer(function LiquidityMining({ poolId, isSup
 								apy={`${queries.osmosis.queryIncentivizedPools
 									.computeAPY(poolId, lockableDuration, priceStore, priceStore.getFiatCurrency('usd')!)
 									.toString()}%`}
-								duration={lockableDuration.humanize()}
+								duration={lockableDuration.locale('ru').humanize()}
 								isMobileView={isMobileView}
 								poolId={poolId}
 								isSuperfluidEnabled={i === lockableDurations.length - 1 && isSuperfluidEnabled}
@@ -175,7 +176,7 @@ const LockupBox: FunctionComponent<{
 			<div className="rounded-xl bg-card py-4 px-5.5 md:py-5.5 md:px-7">
 				<div className="pb-4 flex items-center gap-2">
 					<TitleText isMobileView={isMobileView} pb={0} weight="medium">
-						{duration} unbonding
+						{duration}
 					</TitleText>
 					{isSuperfluidEnabled && (
 						<div className="w-6 h-6">

@@ -655,7 +655,7 @@ const AddRemoveSelectTab: FunctionComponent<{
 						tab === Tabs.ADD ? 'pt-0.25' : 'opacity-40 group-hover:opacity-75',
 						'text-sm md:text-base'
 					)}>
-					Add Liquidity
+					Пополнить Ликвидность
 				</p>
 			</li>
 			<li
@@ -670,7 +670,7 @@ const AddRemoveSelectTab: FunctionComponent<{
 						tab === Tabs.REMOVE ? 'pt-0.25' : 'opacity-40 group-hover:opacity-75',
 						'text-sm md:text-base'
 					)}>
-					Remove Liquidity
+					Снять Ликвидность
 				</p>
 			</li>
 		</ul>
@@ -687,7 +687,7 @@ const AddLiquidity: FunctionComponent<{
 	return (
 		<React.Fragment>
 			<p className="text-xs text-white-disabled mb-3 md:mb-4.5">
-				LP token balance:{' '}
+				LP токены:{' '}
 				<span className="ml-1 text-secondary-200">
 					{poolShare
 						.shrink(true)
@@ -726,7 +726,7 @@ const AddLiquidity: FunctionComponent<{
 					) : (
 						<div className="w-6 h-6 border-2 border-white-high mr-2.5 rounded" />
 					)}
-					Single Asset LP
+					LP из одного токена
 				</label>
 				<img
 					className="h-5 w-5 cursor-pointer"
@@ -1086,7 +1086,7 @@ const BottomButton: FunctionComponent<{
 								/>
 							</svg>
 						) : (
-							<p className="text-white-high font-semibold text-base md:text-lg">Add Liquidity</p>
+							<p className="text-white-high font-semibold text-base md:text-lg">Пополнить Ликвидность</p>
 						)
 					) : account.isSendingMsg === 'exitPool' ? (
 						<svg
@@ -1102,7 +1102,7 @@ const BottomButton: FunctionComponent<{
 							/>
 						</svg>
 					) : (
-						<p className="text-white-high font-semibold text-base md:text-lg">Remove Liquidity</p>
+						<p className="text-white-high font-semibold text-base md:text-lg">Снять Ликвидность</p>
 					)}
 				</button>
 			</div>

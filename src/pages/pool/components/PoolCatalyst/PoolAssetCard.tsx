@@ -32,13 +32,13 @@ export function PoolAssetCard({ index, ratio, denom, totalAmount, myAmount, isMo
 			<AmountSection>
 				<div style={{ marginBottom: 8 }}>
 					<Text size="sm" weight="semiBold" pb={8}>
-						Total amount
+						Общая Сумма
 					</Text>
 					<SubTitleText pb={0}>{totalAmount}</SubTitleText>
 				</div>
 				<div>
 					<Text size="sm" weight="semiBold" pb={8}>
-						My amount
+						Моя Сумма
 					</Text>
 					<SubTitleText pb={0}>{myAmount}</SubTitleText>
 				</div>

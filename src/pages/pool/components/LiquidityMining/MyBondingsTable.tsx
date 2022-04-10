@@ -8,6 +8,7 @@ import { TableBodyRow, TableData, TableHeadRow } from 'src/components/Tables';
 import { SubTitleText, Text } from 'src/components/Texts';
 import useWindowSize from 'src/hooks/useWindowSize';
 import { useStore } from 'src/stores';
+import 'dayjs/locale/ru';
 
 const tableWidths = ['25%', '25%', '25%', '25%'];
 const tableWidthsOnMobileView = ['30%', '40%', '30%'];
@@ -34,7 +35,7 @@ export const MyBondingsTable = observer(function MyBondingsTable({ poolId, isSup
 	return (
 		<div className="mt-10">
 			<div className="px-5 md:px-0">
-				<SubTitleText isMobileView={isMobileView}>My Bondings</SubTitleText>
+				<SubTitleText isMobileView={isMobileView}>Мои бондингсы</SubTitleText>
 			</div>
 			<table className="w-full">
 				<LockupTableHeader isMobileView={isMobileView} />
@@ -45,8 +46,8 @@ export const MyBondingsTable = observer(function MyBondingsTable({ poolId, isSup
 							.getLockedCoinWithDuration(poolShareCurrency, lockableDuration);
 						return (
 							<LockupTableRow
-								key={lockableDuration.humanize()}
-								duration={lockableDuration.humanize()}
+								key={lockableDuration.locale('ru').humanize()}
+								duration={lockableDuration.locale('ru').humanize()}
 								lockup={lockedCoin}
 								apy={`${queries.osmosis.queryIncentivizedPools
 									.computeAPY(poolId, lockableDuration, priceStore, priceStore.getFiatCurrency('usd')!)
@@ -76,18 +77,18 @@ const LockupTableHeader = observer(({ isMobileView }: LockupTableHeaderProps) =>
 		<thead>
 			<TableHeadRow>
 				<TableData width={isMobileView ? tableWidthsOnMobileView[0] : tableWidths[0]}>
-					<Text isMobileView={isMobileView}>Unbonding Duration</Text>
+					<Text isMobileView={isMobileView}>Срок заблокирования </Text>
 				</TableData>
 				{!isMobileView && (
 					<TableData width={tableWidths[1]}>
-						<Text isMobileView={isMobileView}>Current APR</Text>
+						<Text isMobileView={isMobileView}>Актуальный APR</Text>
 					</TableData>
 				)}
 				<TableData width={isMobileView ? tableWidthsOnMobileView[1] : tableWidths[2]}>
-					<Text isMobileView={isMobileView}>Amount</Text>
+					<Text isMobileView={isMobileView}>Сумма</Text>
 				</TableData>
 				<TableData width={isMobileView ? tableWidthsOnMobileView[2] : tableWidths[3]}>
-					<Text isMobileView={isMobileView}>Action</Text>
+					<Text isMobileView={isMobileView}>Действие</Text>
 				</TableData>
 			</TableHeadRow>
 		</thead>
@@ -194,7 +195,7 @@ const LockupTableRow = observer(function LockupTableRow({
 						<Spinner />
 					) : (
 						<Text color="gold" isMobileView={isMobileView}>
-							Unbond All
+							Снять из заблокирования
 						</Text>
 					)}
 				</ButtonFaint>

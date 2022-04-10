@@ -86,7 +86,7 @@ export const TokenSelectList = observer(function TokenSelectList({
 						ref={inputRef}
 						value={searchedToken}
 						onChange={e => setSearchedToken(e.currentTarget.value)}
-						placeholder="Search your token"
+						placeholder="Найти токен"
 					/>
 				</TokenSearchSection>
 			)}

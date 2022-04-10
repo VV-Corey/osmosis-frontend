@@ -41,7 +41,7 @@ export const PoolSwapDialog = wrapBaseDialog(
 		return (
 			<PoolSwapDialogContainer>
 				<TitleText isMobileView={isMobileView} pb={isMobileView ? 16 : 30}>
-					Swap Tokens
+					Обменять Токены
 				</TitleText>
 				<PoolSwapClipboardContent config={config} />
 			</PoolSwapDialogContainer>

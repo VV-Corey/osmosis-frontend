@@ -48,7 +48,7 @@ export const AllPools = observer(function AllPools() {
 	return (
 		<FullWidthContainer style={{ paddingBottom: '40px' }}>
 			<ContainerShowAllPools>
-				<h5>All Pools</h5>
+				<h5>Все пулы</h5>
 				<label htmlFor="show-all-pools" className="text-xs md:text-base flex items-center">
 					<CheckboxShowAllPools
 						id="show-all-pools"
@@ -56,7 +56,7 @@ export const AllPools = observer(function AllPools() {
 						checked={allPoolsShown}
 						onChange={handleShowAllPoolsClicked}
 					/>
-					<TextShowAllPools>Show pools less than ${commaizeNumber(FILTER_TVL_THRESHOLD)} TVL</TextShowAllPools>
+					<TextShowAllPools>Показать пулы с ликвидностью меньше ${commaizeNumber(FILTER_TVL_THRESHOLD)}</TextShowAllPools>
 				</label>
 			</ContainerShowAllPools>
 			<section>

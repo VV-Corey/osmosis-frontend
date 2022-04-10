@@ -65,7 +65,7 @@ export const MyPools = observer(function MyPools() {
 
 	return (
 		<FullWidthContainer>
-			<TitleText>My Pools</TitleText>
+			<TitleText>Мои пулы</TitleText>
 			<PoolCardList poolList={myPoolInfoList} />
 		</FullWidthContainer>
 	);

@@ -78,10 +78,10 @@ const UnlockingTableHeader = observer(({ isMobileView }: UnlockingTableHeaderPro
 		<thead>
 			<TableHeadRow>
 				<TableData width={tableWidths[0]}>
-					<Text isMobileView={isMobileView}>Validator</Text>
+					<Text isMobileView={isMobileView}>Валидатор</Text>
 				</TableData>
 				<TableData width={tableWidths[1]}>
-					<Text isMobileView={isMobileView}>Amount</Text>
+					<Text isMobileView={isMobileView}>Сумма</Text>
 				</TableData>
 				<TableData width={tableWidths[2]}>
 					<Text isMobileView={isMobileView}>Unbonding Complete</Text>

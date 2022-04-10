@@ -15,7 +15,7 @@ export const AssetsPage: FunctionComponent = observer(() => {
 		<AssetsPageContainer>
 			<AssetsOverviewSection>
 				<CenterSelf>
-					<AssetsOverview title="My Osmosis Assets" />
+					<AssetsOverview title="Мои токены в Осмосе" />
 				</CenterSelf>
 			</AssetsOverviewSection>
 

@@ -47,8 +47,6 @@ export const SwapButton = observer(function SwapButton({ config, close }: SwapBu
 						.maxDecimals(18)
 						.toString(),
 					'',
-					{},
-					undefined,
 					tx => {
 						if (!tx.code) {
 							config.setAmount('');
@@ -79,7 +77,7 @@ export const SwapButton = observer(function SwapButton({ config, close }: SwapBu
 				<Spinner />
 			) : (
 				<Text emphasis="high" style={{ letterSpacing: '0.025em' }}>
-					Swap
+					Обменять
 				</Text>
 			)}
 		</CtaButton>

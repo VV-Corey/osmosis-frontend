@@ -56,7 +56,7 @@ export const PoolInfoHeader = observer(function PoolInfoHeader({ poolId, isLBP }
 			<PoolHeader>
 				<div className="mb-2.5 md:mb-0 md:mr-6">
 					<h5>
-						Pool #{poolId} {composition}
+						Пул #{poolId} {composition}
 					</h5>
 				</div>
 				<div className="flex mb-2.5 md:mb-0">
@@ -68,7 +68,7 @@ export const PoolInfoHeader = observer(function PoolInfoHeader({ poolId, isLBP }
 									setIsDialogOpen(true);
 								}}>
 								<Text emphasis="high" isMobileView={isMobileView}>
-									Add / Remove Liquidity
+									Пополнить / снять ликвидность
 								</Text>
 							</ButtonPrimary>
 						</div>
@@ -81,7 +81,7 @@ export const PoolInfoHeader = observer(function PoolInfoHeader({ poolId, isLBP }
 									setIsSwapDialogOpen(true);
 								}}>
 								<Text emphasis="high" isMobileView={isMobileView}>
-									Swap Tokens
+									Обменять валюты
 								</Text>
 							</ButtonPrimary>
 						</div>

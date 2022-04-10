@@ -7,18 +7,18 @@ export const DisplayLeftTime: FunctionComponent<IDisplayLeftTime> = ({ day, hour
 				<React.Fragment>
 					{day}
 					<div className="inline-block py-1 px-2 md:px-3 h-full rounded-lg bg-card mx-1">
-						<h5 className="text-lg md:text-xl">D</h5>
+						<h5 className="text-lg md:text-xl">Д</h5>
 					</div>
 				</React.Fragment>
 			)}
 
 			{hour}
 			<div className="inline-block py-1 px-2 md:px-3 h-full rounded-lg bg-card mx-1">
-				<h5 className="text-lg md:text-xl">H</h5>
+				<h5 className="text-lg md:text-xl">Ч</h5>
 			</div>
 			{minute}
 			<div className="inline-block py-1 px-2 md:px-3 h-full rounded-lg bg-card mx-1">
-				<h5 className="text-lg md:text-xl">M</h5>
+				<h5 className="text-lg md:text-xl">М</h5>
 			</div>
 		</h4>
 	);

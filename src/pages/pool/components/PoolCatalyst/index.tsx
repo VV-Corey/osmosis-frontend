@@ -30,7 +30,7 @@ export const PoolCatalyst = observer(function PoolCatalyst({ poolId }: Props) {
 	return (
 		<PoolCatalystContainer>
 			<TitleText isMobileView={isMobileView} pb={isMobileView ? 10 : 24}>
-				Pool Catalyst
+				Катализатор пула
 			</TitleText>
 			<PoolCardListGridContainer>
 				{/* TODO: IntPretty에 mul과 quo도 추가하자... */}

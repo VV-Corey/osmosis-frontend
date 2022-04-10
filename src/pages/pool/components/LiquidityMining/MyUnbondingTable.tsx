@@ -10,6 +10,7 @@ import { TableBodyRow, TableData, TableHeadRow } from 'src/components/Tables';
 import { SubTitleText, Text } from 'src/components/Texts';
 import { useStore } from 'src/stores';
 import useWindowSize from 'src/hooks/useWindowSize';
+import 'dayjs/locale/ru';
 
 const tableWidths = ['40%', '40%', '20%'];
 
@@ -68,7 +69,7 @@ export const MyUnBondingTable = observer(function MyUnBondingTable({ poolId }: P
 						return (
 							<UnlockingTableRow
 								key={i.toString()}
-								duration={unlocking.duration.humanize()}
+								duration={unlocking.duration.locale('ru').humanize()}
 								amount={unlocking.amount
 									.maxDecimals(6)
 									.trim(true)
@@ -94,10 +95,10 @@ const UnlockingTableHeader = observer(({ isMobileView }: UnlockingTableHeaderPro
 		<thead>
 			<TableHeadRow>
 				<TableData width={tableWidths[0]}>
-					<Text isMobileView={isMobileView}>Unbonding Duration</Text>
+					<Text isMobileView={isMobileView}>Срок Unbonding</Text>
 				</TableData>
 				<TableData width={tableWidths[1]}>
-					<Text isMobileView={isMobileView}>Amount</Text>
+					<Text isMobileView={isMobileView}>Сумма</Text>
 				</TableData>
 				<TableData width={tableWidths[2]}>
 					<Text isMobileView={isMobileView}>Unbonding Complete</Text>
@@ -166,7 +167,7 @@ const UnlockingTableRow = observer(function UnlockingTableRow({
 							<Spinner />
 						) : (
 							<Text color="gold" isMobileView={isMobileView}>
-								Withdraw
+								Снять
 							</Text>
 						)}
 					</ButtonFaint>

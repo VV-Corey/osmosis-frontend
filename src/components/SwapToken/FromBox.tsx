@@ -20,6 +20,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 	dropdownClassName?: string;
 }
 
+
 export const FromBox = observer(function FromBox({ config, dropdownStyle, dropdownClassName, ...props }: Props) {
 	const [isTokenDropdownOpen, setIsTokenDropdownOpen] = useBooleanStateWithWindowEvent(false);
 	const { chainStore, accountStore, queriesStore } = useStore();
@@ -56,13 +57,13 @@ export const FromBox = observer(function FromBox({ config, dropdownStyle, dropdo
 		<TokenBoxContainer {...props}>
 			<TokenBoxRow>
 				<Text emphasis="medium" isMobileView={isMobileView}>
-					From
+					Из
 				</Text>
 				<CenterV>
 					<CenterV>
 						{!isMobileView && (
 							<Text emphasis="medium" size="sm" style={{ marginRight: 8 }} isMobileView={isMobileView}>
-								Available
+								Доступно
 							</Text>
 						)}
 						<Text color="primary" isMobileView={isMobileView}>
@@ -74,12 +75,12 @@ export const FromBox = observer(function FromBox({ config, dropdownStyle, dropdo
 					</CenterV>
 					<MaxButton type="button" size="small" isActive={config.isMax} onClick={handleMaxButtonToggled}>
 						<Text size="xs" emphasis="medium" style={{ lineHeight: 1.2 }} isMobileView={isMobileView}>
-							MAX
+							ВСЕ
 						</Text>
 					</MaxButton>
 					<HalfButton type="button" size="small" isActive={config.ratio === 0.5} onClick={handleHalfButtonToggled}>
 						<Text size="xs" emphasis="medium" style={{ lineHeight: 1.2 }} isMobileView={isMobileView}>
-							HALF
+							50%
 						</Text>
 					</HalfButton>
 				</CenterV>

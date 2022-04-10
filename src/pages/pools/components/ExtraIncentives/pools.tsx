@@ -76,7 +76,7 @@ export const PoolCardItem = observer(
 				<TokenInfoContainer>
 					<PoolCardTokenIcon bgIndex={poolId} src="/public/assets/Icons/OSMO.svg" />
 					<div style={{ marginTop: '15px' }}>
-						<h5>Pool #{poolId}</h5>
+						<h5>Пул #{poolId}</h5>
 						<PoolSubTitle>
 							{currencies
 								.map(token => {
@@ -92,11 +92,11 @@ export const PoolCardItem = observer(
 
 				<CenterV>
 					<AprCol>
-						<PoolHeaderText>Bonus Remaining</PoolHeaderText>
+						<PoolHeaderText>Оставшийся Бонус</PoolHeaderText>
 						<PoolValueText>{sumRemainingBonus.maxDecimals(0).toString()}</PoolValueText>
 					</AprCol>
 					<div style={{ marginLeft: '20px' }}>
-						<PoolHeaderText>Epochs Remaining</PoolHeaderText>
+						<PoolHeaderText>Оставшиеся Эпохи</PoolHeaderText>
 						<PoolValueText>{maxRemainingEpoch}</PoolValueText>
 					</div>
 				</CenterV>

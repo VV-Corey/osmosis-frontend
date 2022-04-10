@@ -3,14 +3,14 @@ export const LAYOUT = {
 		TRADE: {
 			ICON: '/public/assets/Icons/Trade.svg',
 			ICON_SELECTED: '/public/assets/Icons/Trade_selected.svg',
-			TEXT: 'Trade',
+			TEXT: 'Обмен',
 			ROUTE: '/',
 			SELECTED_CHECK: '/',
 		},
 		POOLS: {
 			ICON: '/public/assets/Icons/Pool.svg',
 			ICON_SELECTED: '/public/assets/Icons/Pool_selected.svg',
-			TEXT: 'Pools',
+			TEXT: 'Пулы',
 			SELECTED_CHECK: ['/pools', /\/pool\/[0-9]+/],
 			ROUTE: '/pools',
 		},
@@ -35,7 +35,7 @@ export const LAYOUT = {
 		ASSETS: {
 			ICON: '/public/assets/Icons/Asset.svg',
 			ICON_SELECTED: '/public/assets/Icons/Asset_selected.svg',
-			TEXT: 'Assets',
+			TEXT: 'Валюты',
 			ROUTE: '/assets',
 			SELECTED_CHECK: '/assets',
 		},
@@ -45,17 +45,17 @@ export const LAYOUT = {
 					// So, for now, fallback the stake/governance page to the wallet.keplr.app
 					STAKE: {
 						ICON: '/public/assets/Icons/Ticket.svg',
-						TEXT: 'Stake',
+						TEXT: 'Стейкинг',
 						LINK: 'https://wallet.keplr.app/#/osmosis/stake',
 					},
 					GOVERNANCE: {
 						ICON: '/public/assets/Icons/Vote.svg',
-						TEXT: 'Vote',
+						TEXT: 'Голосовать',
 						LINK: 'https://wallet.keplr.app/#/osmosis/governance',
 					},
 					STATS: {
 						ICON: '/public/assets/Icons/Chart.svg',
-						TEXT: 'Stats',
+						TEXT: 'Данные',
 						LINK: 'https://info.osmosis.zone',
 					},
 			  }
@@ -63,13 +63,13 @@ export const LAYOUT = {
 					GOVERNANCE: {
 						ICON: '/public/assets/Icons/Ticket.svg',
 						ICON_SELECTED: '/public/assets/Icons/Ticket_selected.svg',
-						TEXT: 'Vote',
+						TEXT: 'Голосовать',
 						ROUTE: '/governance',
 						SELECTED_CHECK: [/\/governance[.]?/],
 					},
 					STATS: {
 						ICON: '/public/assets/Icons/Chart.svg',
-						TEXT: 'Stats',
+						TEXT: 'Данные',
 						LINK: 'https://info.osmosis.zone',
 					},
 			  }),

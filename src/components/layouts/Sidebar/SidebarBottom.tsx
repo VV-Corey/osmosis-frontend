@@ -42,7 +42,7 @@ export const SidebarBottom: FunctionComponent = observer(() => {
 							className="bg-transparent border border-opacity-30 border-secondary-200 h-9 w-full rounded-md py-2 px-1 flex items-center justify-center mb-8">
 							<img alt="sign-out" className="w-5 h-5" src={`${MISC.ASSETS_BASE}/Icons/SignOutSecondary.svg`} />
 							<p className="text-sm max-w-24 ml-3 text-secondary-200 font-semibold overflow-x-hidden truncate transition-all">
-								Sign Out
+								Выйти
 							</p>
 						</button>
 					) : null}
@@ -59,7 +59,7 @@ export const SidebarBottom: FunctionComponent = observer(() => {
 				/>
 			)}
 			<p className="py-2 text-xs text-white-high text-center opacity-30">
-				Price Data by
+				Ценовые данные из
 				<a href="https://www.coingecko.com" target="_blank" rel="noreferrer">
 					{' CoinGecko'}
 				</a>

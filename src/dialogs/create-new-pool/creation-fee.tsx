@@ -20,14 +20,14 @@ export const PoolCreationFeeView: FunctionComponent = observer(() => {
 						style={{
 							lineHeight: '24px',
 						}}>
-						Pool Creation Fee
+						Сбор создания пула
 					</h6>
 					<p
 						className="text-sm text-iconDefault font-medium"
 						style={{
 							lineHeight: '20px',
 						}}>
-						Transferred to the Osmosis community pool
+						Перевод в Osmosis community pool
 					</p>
 				</div>
 				<div className="flex-1" />

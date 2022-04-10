@@ -10,7 +10,7 @@ export const ExtraIncentivizedPools: FunctionComponent = observer(() => {
 
 	return (
 		<FullWidthContainer>
-			<TitleText>External Incentive Pools</TitleText>
+			<TitleText>Пулы с внешними стимулами</TitleText>
 
 			{incentivizedPoolInfoList.length !== 0 ? <PoolCardList poolList={incentivizedPoolInfoList} /> : null}
 		</FullWidthContainer>
