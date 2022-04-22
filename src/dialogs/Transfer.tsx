@@ -131,12 +131,12 @@ export const TransferDialog = wrapBaseDialog(
 			return (
 				<div className="w-full h-full text-white-high">
 					<div className="mb-5 md:mb-10 flex justify-between items-center w-full">
-						<h5 className="text-lg md:text-xl">{isWithdraw ? 'Withdraw' : 'Deposit'} IBC Asset</h5>
+						<h5 className="text-lg md:text-xl">{isWithdraw ? 'Вывод' : 'Депозит'} IBC токена</h5>
 					</div>
-					<h6 className="mb-3 md:mb-4 text-base md:text-lg">IBC Transfer</h6>
+					<h6 className="mb-3 md:mb-4 text-base md:text-lg">IBC перевод</h6>
 					<section className={`flex flex-col ${!isWithdraw ? 'md:flex-row' : ''} items-center`}>
 						<div className="w-full flex-1 p-3 md:p-4 border border-white-faint rounded-2xl">
-							<p className="text-white-high">From</p>
+							<p className="text-white-high">Откуда</p>
 							<p className="text-white-disabled truncate overflow-ellipsis">
 								{pickOne(
 									Bech32Address.shortenAddress(account.bech32Address, 100),
@@ -154,9 +154,9 @@ export const TransferDialog = wrapBaseDialog(
 							} rounded-2xl`}>
 							<div className="flex place-content-between">
 								<div className="flex gap-2">
-									<p className="text-white-high">To</p>
+									<p className="text-white-high">Куда</p>
 								</div>
-								{!isValidCustomWithdrawAddr && <p className="text-error">Invalid address</p>}
+								{!isValidCustomWithdrawAddr && <p className="text-error">Неверный адрес</p>}
 							</div>
 							{isEditingWithdrawAddr ? (
 								<>
@@ -164,7 +164,7 @@ export const TransferDialog = wrapBaseDialog(
 										<div className="flex gap-3 w-full border border-secondary-200 rounded-xl p-1 my-2">
 											<img className="ml-2 h-3 my-auto" src="/public/assets/Icons/Warning.svg" />
 											<p className="text-xs">
-												Warning: Withdrawal to central exchange address could result in loss of funds.
+												Внимание: вывод средств на адреса центральных бирж может привести к потере средств.
 											</p>
 										</div>
 									)}
@@ -185,7 +185,7 @@ export const TransferDialog = wrapBaseDialog(
 												'opacity-30': !didVerifyWithdrawRisks || !isValidCustomWithdrawAddr,
 											})}
 											disabled={!didVerifyWithdrawRisks || !isValidCustomWithdrawAddr}>
-											<p className="text-xs text-white-high leading-none">Enter</p>
+											<p className="text-xs text-white-high leading-none">Ввод</p>
 										</button>
 									</div>
 									<label
@@ -206,7 +206,7 @@ export const TransferDialog = wrapBaseDialog(
 										) : (
 											<div className="w-6 h-6 border-2 border-iconDefault mr-2.5 rounded" />
 										)}
-										I verify that I am not sending to an exchange address
+										Подтверждаю, что я не отправляю на адрес биржи
 									</label>
 								</>
 							) : (
@@ -239,10 +239,10 @@ export const TransferDialog = wrapBaseDialog(
 							)}
 						</div>
 					</section>
-					<h6 className="text-base md:text-lg mt-7">Amount To {isWithdraw ? 'Withdraw' : 'Deposit'}</h6>
+					<h6 className="text-base md:text-lg mt-7">Количество {isWithdraw ? 'Вывода' : 'Депозита'}</h6>
 					<div className="mt-3 md:mt-4 w-full p-0 md:p-5 border-0 md:border border-secondary-50 border-opacity-60 rounded-2xl">
 						<p className="text-sm md:text-base mb-2">
-							Available balance:{' '}
+							Доступный баланс:{' '}
 							<span className="text-primary-50">
 								{pickOne(
 									bal
@@ -277,7 +277,7 @@ export const TransferDialog = wrapBaseDialog(
 									'my-auto p-1.5 bg-white-faint hover:opacity-75 cursor-pointer flex justify-center items-center rounded-md absolute top-2 right-2 md:static',
 									amountConfig.isMax && 'bg-primary-200'
 								)}>
-								<p className="text-xs text-white-high leading-none">MAX</p>
+								<p className="text-xs text-white-high leading-none">Макс</p>
 							</button>
 						</div>
 					</div>
@@ -549,7 +549,7 @@ export const TransferDialog = wrapBaseDialog(
 										/>
 									</svg>
 								) : (
-									<h6 className="text-base md:text-lg">{isWithdraw ? 'Withdraw' : 'Deposit'}</h6>
+									<h6 className="text-base md:text-lg">{isWithdraw ? 'Вывод' : 'Депозит'}</h6>
 								)}
 							</button>
 						)}
