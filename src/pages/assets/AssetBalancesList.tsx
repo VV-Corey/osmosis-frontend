@@ -113,7 +113,7 @@ export const AssetBalancesList = observer(function AssetBalancesList() {
 				/>
 			) : null}
 			<div className="px-5 md:px-0">
-				<TitleText isMobileView={isMobileView}>Osmosis Assets</TitleText>
+				<TitleText isMobileView={isMobileView}>Активы на Osmosis</TitleText>
 			</div>
 			<table className="w-full pb-8">
 				<AssetBalanceHeader isMobileView={isMobileView} />
@@ -237,24 +237,24 @@ function AssetBalanceHeader({ isMobileView }: AssetBalanceHeaderProps) {
 		<thead>
 			<TableHeaderRow>
 				<TableData style={{ width: isMobileView ? tableWidthsOnMobileView[0] : tableWidths[0] }}>
-					<Text size="sm">Asset / Chain</Text>
+					<Text size="sm">Актив / Сеть</Text>
 				</TableData>
 				<TableData
 					className="md:!pr-4 lg:!pr-20 !justify-end"
 					style={{
 						width: isMobileView ? tableWidthsOnMobileView[1] : tableWidths[1],
 					}}>
-					<Text size="sm">Balance</Text>
+					<Text size="sm">Баланс</Text>
 				</TableData>
 
 				{!isMobileView && (
 					<TableData style={{ width: tableWidths[2] }}>
-						<Text size="sm">IBC Deposit</Text>
+						<Text size="sm">IBC депозит</Text>
 					</TableData>
 				)}
 				{!isMobileView && (
 					<TableData style={{ width: tableWidths[3] }}>
-						<Text size="sm">IBC Withdraw</Text>
+						<Text size="sm">IBC вывод</Text>
 					</TableData>
 				)}
 			</TableHeaderRow>
@@ -327,7 +327,7 @@ function AssetBalanceRow({
 											onClick={onDeposit}
 											style={{ display: 'flex', alignItems: 'center' }}
 											disabled={isUnstable === true}>
-											<p className="text-sm text-secondary-200 leading-none">Deposit</p>
+											<p className="text-sm text-secondary-200 leading-none">Депозит</p>
 											<img alt="right" src={'/public/assets/Icons/Right.svg'} />
 										</ButtonFaint>
 										{isUnstable ? (
@@ -339,7 +339,7 @@ function AssetBalanceRow({
 													minWidth: '200px',
 													bottom: '30px',
 												}}>
-												<span>IBC deposit/withdrawal is temporarily disabled</span>
+												<span>IBC депозит\вывод временно отключен</span>
 											</div>
 										) : null}
 									</div>
@@ -356,7 +356,7 @@ function AssetBalanceRow({
 											onClick={onWithdraw}
 											style={{ display: 'flex', alignItems: 'center' }}
 											disabled={isUnstable === true}>
-											<p className="text-sm text-secondary-200 leading-none">Withdraw</p>
+											<p className="text-sm text-secondary-200 leading-none">Вывод</p>
 											<img alt="right" src={'/public/assets/Icons/Right.svg'} />
 										</ButtonFaint>
 										{isUnstable ? (
@@ -368,7 +368,7 @@ function AssetBalanceRow({
 													minWidth: '200px',
 													bottom: '30px',
 												}}>
-												<span>IBC deposit/withdrawal is temporarily disabled</span>
+												<span>IBC депозит\вывод временно отключен</span>
 											</div>
 										) : null}
 									</div>
@@ -381,12 +381,12 @@ function AssetBalanceRow({
 					<IBCTransferButtonsOnMobileView>
 						{onWithdraw ? (
 							<ButtonSecondary isOutlined onClick={onWithdraw} style={{ width: '100%' }} disabled={isUnstable === true}>
-								<p className="text-sm text-secondary-200">Withdraw</p>
+								<p className="text-sm text-secondary-200">Вывод</p>
 							</ButtonSecondary>
 						) : null}
 						{onDeposit ? (
 							<ButtonSecondary onClick={onDeposit} style={{ width: '100%' }} disabled={isUnstable === true}>
-								<p className="text-sm">Deposit</p>
+								<p className="text-sm">Депозит</p>
 							</ButtonSecondary>
 						) : null}
 					</IBCTransferButtonsOnMobileView>
