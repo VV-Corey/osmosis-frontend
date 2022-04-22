@@ -35,7 +35,7 @@ export const IbcTransferHistoryList = observer(function IbcTransferHistoryList()
 		<>
 			<div className="px-5 md:px-0">
 				<TitleText style={{ paddingTop: isMobileView ? 16 : 40 }} isMobileView={isMobileView}>
-					IBC Transaction History
+					История IBC транзакций
 				</TitleText>
 			</div>
 			<div className="overflow-x-scroll">
@@ -89,8 +89,8 @@ const IbcTransferHistoryRow = observer(function IbcTransferHistoryRow({ history 
 				<Text emphasis="high">
 					{ChainIdHelper.parse(chainStore.current.chainId).identifier ===
 					ChainIdHelper.parse(history.destChainId).identifier
-						? 'Deposit'
-						: 'Withdraw'}
+						? 'Депозит'
+						: 'Вывод'}
 				</Text>
 			</TableData>
 			<TableData align="right" style={{ width: tableWidths[3] }}>
@@ -117,7 +117,7 @@ function StatusTableData({ status }: { status?: IBCTransferHistoryStatus }) {
 		return (
 			<>
 				<SpinningImg alt="loading" src="/public/assets/Icons/Loading.png" />
-				Pending
+				В ожидании
 			</>
 		);
 	}
@@ -127,28 +127,28 @@ function StatusTableData({ status }: { status?: IBCTransferHistoryStatus }) {
 			return (
 				<>
 					<StatusImg alt="success" src="/public/assets/Icons/ToastSuccess.png" />
-					Success
+					Выполнен
 				</>
 			);
 		case 'pending':
 			return (
 				<>
 					<SpinningImg alt="loading" src="/public/assets/Icons/Loading.png" />
-					Pending
+					В ожидании
 				</>
 			);
 		case 'refunded':
 			return (
 				<>
 					<StatusImg alt="failed" src="/public/assets/Icons/FailedTx.png" />
-					Refunded
+					Возврат
 				</>
 			);
 		case 'timeout':
 			return (
 				<>
 					<SpinningImg alt="loading" src="/public/assets/Icons/Loading.png" />
-					Failed: Pending refund
+					Ошибка: в ожидании возврата
 				</>
 			);
 		default:
@@ -171,19 +171,19 @@ function IbcTransferHistoryHeader() {
 		<thead>
 			<TableHeaderRow>
 				<TableData style={{ width: tableWidths[0] }}>
-					<Text size="sm">Transaction Hash</Text>
+					<Text size="sm">Хеш транзакции</Text>
 				</TableData>
 				<TableData style={{ width: tableWidths[1] }}>
-					<Text size="sm">IBC Sequence #</Text>
+					<Text size="sm">IBC очередность #</Text>
 				</TableData>
 				<TableData align="right" style={{ width: tableWidths[2] }}>
-					<Text size="sm">Type</Text>
+					<Text size="sm">Тип</Text>
 				</TableData>
 				<TableData align="right" style={{ width: tableWidths[3] }}>
-					<Text size="sm">Amount</Text>
+					<Text size="sm">Количество</Text>
 				</TableData>
 				<TableData align="right" style={{ width: tableWidths[4] }}>
-					<Text size="sm">Status</Text>
+					<Text size="sm">Статус</Text>
 				</TableData>
 			</TableHeaderRow>
 		</thead>
