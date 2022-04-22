@@ -32,7 +32,7 @@ export const RewardPayoutCountdown = observer(function RewardPayoutCountdown() {
 	})();
 	const [hour, minute] = payoutTime.split('-');
 	return (
-		<OverviewLabelValue label="Следующая премия через ">
+		<OverviewLabelValue label="Следующее распределение наград через ">
 			<DisplayLeftTime hour={hour} minute={minute} />
 		</OverviewLabelValue>
 	);
