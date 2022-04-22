@@ -75,7 +75,7 @@ export const FeesBox = observer(function FeesBox({ config, ...props }: Props) {
 
 			<Section>
 				<Text size="sm" isMobileView={isMobileView}>
-				Обменный сбор
+				Комиссия за обмен
 				</Text>
 				<Text size="sm" isMobileView={isMobileView}>
 					{swapFeeText}
