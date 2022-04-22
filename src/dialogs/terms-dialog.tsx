@@ -25,7 +25,7 @@ export const TermsDialog = wrapBaseDialog(
 
 							setIsChecked(value => !value);
 						}}>
-						I understand the risks and would like to proceed.
+						Я понимаю риски и хочу продолжить.
 					</div>
 				</div>
 				<div className="w-full flex justify-center">
