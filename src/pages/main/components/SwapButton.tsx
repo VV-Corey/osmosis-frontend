@@ -168,7 +168,7 @@ export const SwapButton = observer(function SwapButton({ config }: Props) {
 			) : (
 				<Text emphasis="high" isMobileView={isMobileView} style={{ letterSpacing: '0.025em' }}>
 					{isSwapPoolsFetching && <Spinner style={{ marginRight: 12, display: 'inline-block' }} />}
-					{config.showWarningOfSlippage ? 'Swap Anyway' : 'Обменять'}
+					{config.showWarningOfSlippage ? 'Все равно обменять' : 'Обменять'}
 				</Text>
 			)}
 		</CtaButton>
