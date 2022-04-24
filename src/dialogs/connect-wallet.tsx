@@ -31,7 +31,7 @@ require('../../public/assets/osmosis-wallet-connect.png');
 const walletList = [
 	{
 		name: 'Keplr Wallet',
-		description: 'Keplr Browser Extension',
+		description: 'Расширение для браузера Keplr',
 		logoUrl: '/public/assets/other-logos/keplr.png',
 		type: 'extension',
 	},

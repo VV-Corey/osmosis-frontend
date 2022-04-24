@@ -59,7 +59,7 @@ export const SidebarBottom: FunctionComponent = observer(() => {
 				/>
 			)}
 			<p className="py-2 text-xs text-white-high text-center opacity-30">
-				Ценовые данные из
+				Данные о ценах предоставлены
 				<a href="https://www.coingecko.com" target="_blank" rel="noreferrer">
 					{' CoinGecko'}
 				</a>

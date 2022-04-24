@@ -21,7 +21,7 @@ export const ToBox = observer(function ToBox({ config, dropdownClassName, dropdo
 		<TokenBoxContainer {...props}>
 			<TokenBoxRow>
 				<Text isMobileView={isMobileView} emphasis="medium">
-					В
+					На что
 				</Text>
 			</TokenBoxRow>
 			<TokenBoxRow>

@@ -6,32 +6,32 @@ export const Terms: FunctionComponent = () => {
 
 	return (
 		<TermsDialog
-			title="Before you enter the lab..."
+			title="Прежде чем войти в лабораторию..."
 			isOpen={isOpen}
 			onAgree={() => {
 				setIsOpen(false);
 				localStorage.setItem('terms_agreement', 'true');
 			}}
 			isHideCloseButton={true}>
-			Osmosis is a decentralized peer-to-peer blockchain that people can use to create liquidity and trade IBC enabled
-			tokens. The Osmosis blockchain is made up of free, public, and open-source software. Your use of Osmosis involves
-			various risks, including, but not limited, to losses while digital assets are being supplied to Osmosis pools and
-			losses due to the fluctuation of prices of tokens in a trading pair or liquidity pool, including Impermanence
-			Loss. Before using any pool on the Osmosis blockchain, you should review the relevant documentation to make sure
-			you understand how Osmosis works, and the pool you use on Osmosis works. Additionally, just as you can access
-			email protocols, such as SMTP, through multiple email clients, you can access pools on Osmosis through several web
-			or mobile interfaces. You are responsible for doing your own diligence on those interfaces to understand the fees
-			and risks they present.
+			Osmosis — это децентрализованный peer-to-peer блокчейн, который можно использовать для создания ликвидности и торговли 
+			токенами с поддержкой IBC. Блокчейн Osmosis состоит из бесплатного общедоступного программного обеспечения с открытым 
+			исходным кодом. Использование Osmosis сопряжено с различными рисками, включая, помимо прочего, потери во время поставки 
+			цифровых активов в пулы ликвидности Osmosis и потери из-за колебаний цен на токены в торговой паре или пуле ликвидности, 
+			включая непостоянную потерю (Impermanent Loss). Прежде чем использовать какой-либо пул в блокчейне Osmosis, 
+			вам следует ознакомиться с соответствующей документацией, чтобы убедиться, что вы понимаете, как работает Osmosis, 
+			и работает ли пул, который вы используете в Osmosis. В добавок, так же как вы можете получить доступ к почтовым 
+			протоколам, таким как SMTP, используя разные почтовые клиенты, вы можете получить доступ к пулам на Osmosis через 
+			несколько web или мобильных интерфейсов. Вы должны сами осознать комиссии и риски, которые они представляют.
 			<br />
 			<br />
-			AS DESCRIBED IN THE OSMOSIS LICENSES, THE OSMOSIS PROTOCOL IS PROVIDED “AS IS”, AT YOUR OWN RISK, AND WITHOUT
-			WARRANTIES OF ANY KIND. Although Osmosis Labs Pte. Ltd. ( “Osmosis Labs” ) developed much of the initial code for
-			the Osmosis protocol, it does not provide, own, or control the Osmosis protocol, which is run by a decentralized
-			validator set. Upgrades and modifications to the protocol are managed in a community-driven way by holders of the
-			OSMO governance token. No developer or entity involved in creating the Osmosis protocol will be liable for any
-			claims or damages whatsoever associated with your use, inability to use, or your interaction with other users of
-			the Osmosis protocol, including any direct, indirect, incidental, special, exemplary, punitive or consequential
-			damages, or loss of profits, cryptocurrencies, tokens, or anything else of value.
+			КАК УКАЗАНО В ЛИЦЕНЗИЯХ, ПРОТОКОЛ OSMOSIS ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», НА ВАШ СТРАХ И РИСК И БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ. 
+			Несмотря на то, что Osmosis Labs Pte. Ltd. ( “Osmosis Labs” ) разработала большую часть исходного кода для протокола Osmosis, 
+			она не представляет, не владеет и не контролирует протокол Osmosis, который управляется децентрализованным набором валидаторов. 
+			Обновления и модификации протокола управляются владельцами токена управления OSMO по инициативе сообщества. 
+			Ни один разработчик или юридическое лицо, участвующее в создании протокола Osmosis, не будет нести ответственности 
+			за любые претензии или убытки, связанные с вашим использованием, невозможностью использования или вашим взаимодействием 
+			с другими пользователями протокола Osmosis, включая любые прямые, косвенные, случайные, специальные, показательные, 
+			штрафные, косвенные убытки или упущенную выгоду, криптовалюты, токены или что-либо остальное ценное.
 		</TermsDialog>
 	);
 };

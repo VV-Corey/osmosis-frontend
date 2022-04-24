@@ -35,7 +35,7 @@ export const LAYOUT = {
 		ASSETS: {
 			ICON: '/public/assets/Icons/Asset.svg',
 			ICON_SELECTED: '/public/assets/Icons/Asset_selected.svg',
-			TEXT: 'Валюты',
+			TEXT: 'Активы',
 			ROUTE: '/assets',
 			SELECTED_CHECK: '/assets',
 		},
@@ -50,12 +50,12 @@ export const LAYOUT = {
 					},
 					GOVERNANCE: {
 						ICON: '/public/assets/Icons/Vote.svg',
-						TEXT: 'Голосовать',
+						TEXT: 'Голосования',
 						LINK: 'https://wallet.keplr.app/#/osmosis/governance',
 					},
 					STATS: {
 						ICON: '/public/assets/Icons/Chart.svg',
-						TEXT: 'Данные',
+						TEXT: 'Статистика',
 						LINK: 'https://info.osmosis.zone',
 					},
 			  }
@@ -63,13 +63,13 @@ export const LAYOUT = {
 					GOVERNANCE: {
 						ICON: '/public/assets/Icons/Ticket.svg',
 						ICON_SELECTED: '/public/assets/Icons/Ticket_selected.svg',
-						TEXT: 'Голосовать',
+						TEXT: 'Голосования',
 						ROUTE: '/governance',
 						SELECTED_CHECK: [/\/governance[.]?/],
 					},
 					STATS: {
 						ICON: '/public/assets/Icons/Chart.svg',
-						TEXT: 'Данные',
+						TEXT: 'Статистика',
 						LINK: 'https://info.osmosis.zone',
 					},
 			  }),

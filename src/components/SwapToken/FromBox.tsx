@@ -57,7 +57,7 @@ export const FromBox = observer(function FromBox({ config, dropdownStyle, dropdo
 		<TokenBoxContainer {...props}>
 			<TokenBoxRow>
 				<Text emphasis="medium" isMobileView={isMobileView}>
-					Из
+					Что
 				</Text>
 				<CenterV>
 					<CenterV>

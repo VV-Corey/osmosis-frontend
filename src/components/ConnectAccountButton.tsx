@@ -22,7 +22,7 @@ export function ConnectAccountButton(props: React.HTMLAttributes<HTMLButtonEleme
 				isMobileView={isMobileView}
 				emphasis="high"
 				weight="semiBold">
-				Connect Wallet
+				Подключить
 			</Text>
 		</ConnectAccountButtonWrapper>
 	);
